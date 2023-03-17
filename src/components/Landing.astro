@@ -1,0 +1,97 @@
+---
+import { pixelsToRem } from "../layouts/Layout.astro"
+import Card from "./Card.astro"
+---
+
+<div class="main-container">
+  <div class="left-component">
+    <div class="left-container">
+      <div class="large-title">
+        <div class="top-title">
+          <h1 style="font-weight: 400; font-size:2.3rem">The Uncloggable Solution</h1>
+        </div>
+        <div class="bottom-title">
+          <h1>
+            Get Your <span style="font-style: italic; color:#1170f4">Flow</span> Back
+          </h1>
+        </div>
+      </div>
+      <div class="subtitle" style="width:400px; text-justify: distribute;">
+        <p>
+          <span style="font-weight: bold;">Ontario Drain Cleaners</span> unclog any type of drain: main
+          drains, toilets, showers, bathtubs, kitchen sinks, floor drains, storm sewers, septic tanks,
+          outdoor drains (rain gutters & french drains) etc.
+        </p>
+      </div>
+      <div role="button" class="contact-button">
+        <p>Contact Us</p>
+      </div>
+    </div>
+  </div>
+  <div class="right-component">
+    <div class="image-container">
+      <img class="plumbing-image" src="/landing-image.png" />
+    </div>
+  </div>
+</div>
+
+<style>
+  @media screen and (min-width: 65.625rem) {
+    h1 {
+      font-size: 3.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    .text-gradient {
+      background-image: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 400%;
+      background-position: 0%;
+    }
+
+    .main-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      margin: 7rem;
+      height: 100%;
+    }
+
+    .contact-button {
+      border: 1px solid rgb(233, 232, 232);
+      border-radius: 4px;
+      width: 120px;
+      text-align: center;
+      cursor: pointer;
+      background-color: white;
+      box-shadow: -15px 28px 33px -10px rgba(0, 0, 0, 0.35);
+    }
+
+    .left-component {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    .right-component {
+      width: 100%;
+      height: 100%;
+    }
+    .large-title {
+      width: 31.25rem;
+    }
+    .left-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .plumbing-image {
+      vertical-align: middle;
+      display: inline-block;
+      width: 100%;
+      max-width: 90%;
+      padding: 16px;
+      min-width: 31.25rem;
+    }
+  }
+</style>
