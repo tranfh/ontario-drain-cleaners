@@ -8,16 +8,16 @@ import Card from "./Card.astro"
     <div class="left-container">
       <div class="large-title">
         <div class="top-title">
-          <h1 style="font-weight: 400; font-size:2.3rem">The Uncloggable Solution</h1>
+          <h1 class="title1">The Uncloggable Solution</h1>
         </div>
         <div class="bottom-title">
-          <h1>
+          <h1 class="title2">
             Get Your <span style="font-style: italic; color:#1170f4">Flow</span> Back
           </h1>
         </div>
       </div>
-      <div class="subtitle" style="width:400px; text-justify: distribute;">
-        <p>
+      <div class="subtitle">
+        <p style="text-align: justify;">
           <span style="font-weight: bold;">Ontario Drain Cleaners</span> unclog any type of drain: main
           drains, toilets, showers, bathtubs, kitchen sinks, floor drains, storm sewers, septic tanks,
           outdoor drains (rain gutters & french drains) etc.
@@ -39,7 +39,17 @@ import Card from "./Card.astro"
 </div>
 
 <style>
-  @media screen and (min-width: 65.625rem) {
+  .contact-button {
+    border: 1px solid rgb(233, 232, 232);
+    border-radius: 4px;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: -15px 28px 33px -10px rgba(0, 0, 0, 0.35);
+  }
+
+  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
     h1 {
       font-size: 3.25rem;
       font-weight: 700;
@@ -61,16 +71,6 @@ import Card from "./Card.astro"
       margin: 7rem;
     }
 
-    .contact-button {
-      border: 1px solid rgb(233, 232, 232);
-      border-radius: 4px;
-      width: 120px;
-      text-align: center;
-      cursor: pointer;
-      background-color: white;
-      box-shadow: -15px 28px 33px -10px rgba(0, 0, 0, 0.35);
-    }
-
     .left-component {
       width: 100%;
       display: flex;
@@ -83,6 +83,10 @@ import Card from "./Card.astro"
     .large-title {
       width: 31.25rem;
     }
+    .title1 {
+      font-weight: 400;
+      font-size: 2.3rem;
+    }
     .left-container {
       display: flex;
       flex-direction: column;
@@ -94,6 +98,51 @@ import Card from "./Card.astro"
       max-width: 90%;
       padding: 16px;
       min-width: 31.25rem;
+    }
+    .subtitle {
+      width: 26rem;
+    }
+  }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .main-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 8px;
+      margin-top: 16px;
+    }
+
+    .plumbing-image {
+      vertical-align: middle;
+      display: inline-block;
+      width: 100%;
+      max-width: 90%;
+      padding: 16px;
+      min-width: 20rem;
+    }
+    .large-title,
+    .left-component,
+    .subtitle {
+      width: 90%;
+    }
+    .title1 {
+      font-weight: 400;
+      font-size: 1.7rem;
+      margin: 0px;
+    }
+    .title2 {
+      margin: 0px;
+    }
+    .contact-button {
+      border: 1px solid rgb(233, 232, 232);
+      border-radius: 4px;
+      width: 120px;
+      text-align: center;
+      cursor: pointer;
+      background-color: white;
+      box-shadow: -15px 28px 33px -10px rgba(0, 0, 0, 0.35);
+      margin-top: 5px;
     }
   }
 </style>

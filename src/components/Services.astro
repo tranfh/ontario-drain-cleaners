@@ -39,7 +39,8 @@ import Card from "./Card.astro"
   p {
     margin: 0;
   }
-  @media screen and (min-width: 65.625rem) {
+
+  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
     .main-container {
       display: flex;
       align-items: center;
@@ -70,6 +71,20 @@ import Card from "./Card.astro"
       width: 40rem;
       padding: 24px 0px;
       padding-bottom: 50px;
+    }
+  }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .card1,
+    .card2,
+    .card3 {
+      width: 90%;
+      height: 70%;
+    }
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
     }
   }
 </style>

@@ -1,6 +1,6 @@
 <div class="contact-main-container">
   <div class="title" id="contact-us">
-    <h1 style="font-size:3rem; text-align: center;">Have Questions? Reach Out To Us</h1>
+    <h1 class="title-text">Have Questions? Reach Out To Us</h1>
   </div>
   <div class="content-container">
     <div class="left-component">
@@ -32,9 +32,13 @@
             style="height=:3rem; width:3rem;"
           />
         </div>
+
         <div class="right-side">
           <div class="phone-title">
-            <span style="font-weight: bold">Telephone</span><br />
+            <>
+              <span style="font-weight: bold">Telephone</span>
+              <br />
+            </>
             <p>+1 (647) 927 7677</p>
           </div>
         </div>
@@ -64,80 +68,147 @@
 </div>
 
 <style>
-  .contact-main-container {
-    background-color: #d2d9f0;
-    height: 100vh;
-    padding: 3rem 0px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+    .contact-main-container {
+      background-color: #d2d9f0;
+      height: 100vh;
+      padding: 3rem 0px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .form-container {
+      height: 32rem;
+      width: 30rem;
+    }
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    textarea {
+      height: 15rem;
+      max-height: 15rem;
+    }
+    .content-container {
+      background-color: rgba(248, 252, 255, 100);
+      border-radius: 1rem;
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      height: 100%;
+    }
+    .card {
+      background-color: white;
+      border-radius: 1rem;
+      max-width: 24.37rem;
+      height: 10.79rem;
+      -webkit-box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.11);
+      box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.11);
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 1rem 0px;
+    }
+    .right-component {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0px 1rem;
+    }
+    .left-component {
+      display: flex;
+      align-items: center;
+      padding: 0px 1rem;
+    }
+    .submitFormButton > h3 {
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #1170f4;
+      box-shadow: 22px 10px 50px -10px rgba(0, 0, 0, 0.36);
+      color: white;
+      height: 3rem;
+      width: 100%;
+      text-align: center;
+      vertical-align: middle;
+      margin: 0px;
+    }
+    .left-side {
+      padding: 1rem;
+    }
+    .title-text {
+      font-size: 3rem;
+      text-align: center;
+    }
   }
-  .form-container {
-    height: 32rem;
-    width: 30rem;
-  }
-  input[type="text"],
-  textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-  }
-  textarea {
-    height: 15rem;
-    max-height: 15rem;
-  }
-  .content-container {
-    background-color: rgba(248, 252, 255, 100);
-    border-radius: 1rem;
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    height: 100%;
-  }
-  .card {
-    background-color: white;
-    border-radius: 1rem;
-    max-width: 24.37rem;
-    height: 10.79rem;
-    -webkit-box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.11);
-    box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.11);
-    padding: 0.5rem 1rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 1rem 0px;
-  }
-  .right-component {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0px 1rem;
-  }
-  .left-component {
-    display: flex;
-    align-items: center;
-    padding: 0px 1rem;
-  }
-  .submitFormButton > h3 {
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #1170f4;
-    box-shadow: 22px 10px 50px -10px rgba(0, 0, 0, 0.36);
-    color: white;
-    height: 3rem;
-    width: 100%;
-    text-align: center;
-    vertical-align: middle;
-    margin: 0px;
-  }
-  .left-side {
-    padding: 1rem;
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .contact-main-container {
+      background-color: transparent;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .title-text {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    .content-container {
+      display: flex;
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+    .card {
+      display: none;
+    }
+    .form-container {
+      height: 100%;
+      width: 100%;
+    }
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    textarea {
+      height: 15rem;
+      max-height: 15rem;
+    }
+    .name-input,
+    .email-input,
+    .message-input {
+      display: inline-block;
+      width: 98%;
+    }
+    .submitFormButton > h3 {
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #1170f4;
+      box-shadow: 22px 10px 50px -10px rgba(0, 0, 0, 0.36);
+      color: white;
+      height: 3rem;
+      width: 98%;
+      text-align: center;
+      vertical-align: middle;
+      margin: 0px;
+    }
   }
 </style>

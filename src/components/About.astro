@@ -73,4 +73,31 @@
   .text-container {
     max-width: 31.25rem;
   }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .main-container {
+      display: initial;
+      background-color: transparent;
+    }
+    .container {
+      width: 100%;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      position: initial;
+    }
+    .repair-guys {
+      vertical-align: middle;
+      display: inline-block;
+      width: 100%;
+      max-width: 90%;
+      padding: 16px;
+      min-width: 20rem;
+    }
+    .right-component {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      padding: 1rem;
+    }
+  }
 </style>

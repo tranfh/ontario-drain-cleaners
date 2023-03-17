@@ -26,8 +26,8 @@ export const pixelsToRem = (px: number, base = 16): string => {
     />
     <title>{title}</title>
   </head>
-  <Header />
   <body>
+    <Header />
     <slot />
   </body>
 
@@ -36,15 +36,16 @@ export const pixelsToRem = (px: number, base = 16): string => {
       --accent: 104, 153, 190, 30;
       --accent-gradient: linear-gradient(45deg, rgba(var(--accent)), #648de034 30%, white 60%);
     }
-    html {
-      position: fixed;
+    html,
+    body {
+      position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
+      width: 100%;
       overflow-x: hidden;
       font-family: "Titillium Web";
-      position: absolute;
       background: rgb(220, 229, 236);
       background: -moz-linear-gradient(
         20deg,
@@ -59,6 +60,7 @@ export const pixelsToRem = (px: number, base = 16): string => {
       background: linear-gradient(20deg, rgba(220, 229, 236, 1) 31%, rgba(104, 153, 190, 1) 89%);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dce5ec",endColorstr="#6899be",GradientType=1);
     }
+
     code {
       font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
         Bitstream Vera Sans Mono, Courier New, monospace;
