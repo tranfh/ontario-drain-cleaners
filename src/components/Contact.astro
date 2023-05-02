@@ -25,24 +25,24 @@
       </div>
     </div>
     <div class="right-component">
-      <div class="telephone-component card">
-        <div class="left-side">
-          <img
-            src="https://raw.githubusercontent.com/tranfh/ontario-drain-cleaners/master/public/orangePhoneIcon.png"
-            style="height=:3rem; width:3rem;"
-          />
-        </div>
+      <a href="tel:16479277677" style="text-decoration: none; color: black">
+        <div class="telephone-component card">
+          <div class="left-side">
+            <img
+              src="https://raw.githubusercontent.com/tranfh/ontario-drain-cleaners/master/public/orangePhoneIcon.png"
+              style="height=:3rem; width:3rem;"
+            />
+          </div>
 
-        <div class="right-side">
-          <div class="phone-title">
-            <>
+          <div class="right-side">
+            <div class="phone-title">
               <span style="font-weight: bold">Telephone</span>
               <br />
-            </>
-            <p>+1 (647) 927 7677</p>
+              <p>+1 (647) 927 7677</p>
+            </div>
           </div>
         </div>
-      </div>
+      </a>
 
       <div class="email-component card">
         <div class="left-side">
@@ -65,10 +65,15 @@
       </div>
     </div>
   </div>
+  <div class="mobile-call-button">
+    <a href="tel:16479277677"
+      ><p style="color:white; text-decoration:none">Call Us: +1 (647) 927-7677</p></a
+    >
+  </div>
 </div>
 
 <style>
-  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) {
     .contact-main-container {
       background-color: #d2d9f0;
       height: 100vh;
@@ -149,6 +154,9 @@
       font-size: 3rem;
       text-align: center;
     }
+    .mobile-call-button {
+      display: none;
+    }
   }
 
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -211,6 +219,16 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    .mobile-call-button {
+      background-color: #1170f4;
+      border-radius: 4px;
+      width: 89%;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
     }
   }
 </style>
